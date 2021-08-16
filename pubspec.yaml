@@ -24,3 +24,5 @@ flutter:
   assets:
     - assets/splash_logo.png
     - assets/splash_logo_sm.png
+    - assets/header_icon_music.png
+    - assets/tmp_icon_music.png

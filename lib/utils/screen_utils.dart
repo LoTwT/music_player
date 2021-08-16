@@ -23,4 +23,16 @@ class ScreenUtils {
   double calc(double value) {
     return value * _screenWidth / _width;
   }
+
+  double get screenWidth {
+    return _screenWidth;
+  }
+
+  double get screenHeight {
+    return _screenHeight;
+  }
+
+  double get screenPaddingTop {
+    return _screenPaddingTop;
+  }
 }

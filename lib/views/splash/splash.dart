@@ -7,7 +7,7 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screen = ScreenUtils(context);
-    Timer(Duration(seconds: 2),
+    Timer(Duration(seconds: 0),
         () => Navigator.pushReplacementNamed(context, "/home"));
 
     return Container(
