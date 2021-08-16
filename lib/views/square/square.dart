@@ -5,7 +5,6 @@ class Square extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screen = ScreenUtils(context);
-    var arguments = ModalRoute.of(context)!.settings.arguments as Map;
 
     return Scaffold(
       body: Container(
@@ -13,7 +12,6 @@ class Square extends StatelessWidget {
         child: Column(
           children: [
             Text("广场"),
-            Text(arguments["from"].toString()),
           ],
         ),
       ),
