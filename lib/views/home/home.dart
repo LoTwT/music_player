@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/views/home/header.dart';
+import 'package:music_player/views/home/swiper.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -13,6 +14,7 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Header(),
+            Swiper(),
           ],
         ),
       ),
