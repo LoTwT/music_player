@@ -4,7 +4,6 @@ import 'package:music_player/utils/screen_utils.dart';
 class SongList extends StatelessWidget {
   final String title;
   final VoidCallback onMore;
-
   final List<Map> songs;
 
   SongList(
