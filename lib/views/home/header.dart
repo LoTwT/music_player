@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/utils/screen_utils.dart';
+import 'package:music_player/widgets/playing_icon.dart';
 
 class Header extends StatelessWidget {
   @override
@@ -68,21 +69,9 @@ class Header extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(left: screen.calc(32)),
-            width: screen.calc(60),
-            height: screen.calc(60),
-            decoration: BoxDecoration(
-              border: Border.all(
-                width: screen.calc(3),
-                color: Color(0xffe5e5e5),
-              ),
-              borderRadius: BorderRadius.circular(
-                screen.calc(30),
-              ),
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/tmp_icon_music.png",
-                ),
-              ),
+            child: Hero(
+              tag: "PlayingIcon",
+              child: PlayingIcon(),
             ),
           ),
         ],
