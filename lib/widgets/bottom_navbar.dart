@@ -1,43 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:music_player/mock/mock.dart' show BottomNavbarInfos;
 import 'package:music_player/utils/screen_utils.dart';
 
 typedef BottomNavbarCallback = void Function(int);
-const BottomNavbarInfos = <Map>[
-  {
-    "imgPath": "assets/icon-music-acc-b.png",
-    "activeImgPath": "assets/icon-music-acc.png",
-    "title": "发现",
-  },
-  {
-    "imgPath": "assets/icon-video-b.png",
-    "activeImgPath": "assets/icon-video.png",
-    "title": "视频",
-  },
-  {
-    "imgPath": "assets/icon-music-b.png",
-    "activeImgPath": "assets/icon-music.png",
-    "title": "我的",
-  },
-  {
-    "imgPath": "assets/icon-group-b.png",
-    "activeImgPath": "assets/icon-group.png",
-    "title": "云村",
-  },
-  {
-    "imgPath": "assets/icon-person-b.png",
-    "activeImgPath": "assets/icon-person.png",
-    "title": "帐号",
-  },
-];
 
 class BottomNavbar extends HookWidget {
   final int value;
-  final BottomNavbarCallback onChanged;
 
   BottomNavbar({
     Key? key,
-    required this.onChanged,
     this.value = 0,
   }) : super(key: key);
 
@@ -45,27 +17,42 @@ class BottomNavbar extends HookWidget {
   Widget build(BuildContext context) {
     final screen = ScreenUtils(context);
 
-    return Container(
-      height: screen.calc(100),
-      padding: EdgeInsets.only(top: screen.calc(10)),
-      decoration: BoxDecoration(color: Color(0x66ffffff)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: BottomNavbarInfos.asMap()
-            .map(
-              (index, info) => MapEntry(
-                index,
-                _BottomNavbarItem(
-                  imgPath: info["imgPath"],
-                  activeImgPath: info["activeImgPath"],
-                  title: info["title"],
-                  onTap: () => onChanged(index),
-                  isActive: value == index,
-                ),
-              ),
-            )
-            .values
-            .toList(),
+    return Hero(
+      tag: "_BottomNavbar",
+      child: DefaultTextStyle(
+        style: TextStyle(inherit: false),
+        child: Container(
+          height: screen.calc(100),
+          padding: EdgeInsets.only(top: screen.calc(10)),
+          decoration: BoxDecoration(color: Color(0x66ffffff)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: BottomNavbarInfos.asMap()
+                .map(
+                  (index, info) => MapEntry(
+                    index,
+                    _BottomNavbarItem(
+                      imgPath: info["imgPath"],
+                      activeImgPath: info["activeImgPath"],
+                      title: info["title"],
+                      isActive: value == index,
+                      onTap: () {
+                        switch (index) {
+                          case 0:
+                            Navigator.pushNamed(context, "/home");
+                            break;
+                          case 2:
+                            Navigator.pushNamed(context, "/square");
+                            break;
+                        }
+                      },
+                    ),
+                  ),
+                )
+                .values
+                .toList(),
+          ),
+        ),
       ),
     );
   }
