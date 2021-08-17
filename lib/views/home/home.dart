@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/views/home/category.dart';
 import 'package:music_player/views/home/header.dart';
 import 'package:music_player/views/home/swiper.dart';
+import 'package:music_player/widgets/bottom_navbar.dart';
 import 'package:music_player/widgets/recommend_list.dart';
 import 'package:music_player/widgets/song_list.dart';
 
-class Home extends StatelessWidget {
+class Home extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    var screen = ScreenUtils(context);
+    final screen = ScreenUtils(context);
+    final currentBottomNav = useState(0);
 
     return Scaffold(
       body: DefaultTextStyle(
@@ -45,6 +48,10 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavbar(
+        value: currentBottomNav.value,
+        onChanged: (index) => currentBottomNav.value = index,
       ),
     );
   }
