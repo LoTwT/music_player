@@ -135,3 +135,24 @@ var squareBannerItems = [
   {"index": 5, "title": "555", "img": "assets/tmp_square_cover_3.png"},
   {"index": 6, "title": "666", "img": "assets/tmp_square_cover_1.png"},
 ];
+
+const SquareListItems = [
+  {"id": 11, "img": "assets/tmp_cover_1.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 12, "img": "assets/tmp_cover_2.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 13, "img": "assets/tmp_cover_3.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 14, "img": "assets/tmp_cover_4.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 15, "img": "assets/tmp_cover_5.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 16, "img": "assets/tmp_cover_6.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 17, "img": "assets/tmp_cover_1.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 18, "img": "assets/tmp_cover_2.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 19, "img": "assets/tmp_cover_3.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 20, "img": "assets/tmp_cover_4.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 21, "img": "assets/tmp_cover_5.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 22, "img": "assets/tmp_cover_6.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 23, "img": "assets/tmp_cover_1.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 24, "img": "assets/tmp_cover_2.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 25, "img": "assets/tmp_cover_3.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 26, "img": "assets/tmp_cover_4.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 27, "img": "assets/tmp_cover_5.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+  {"id": 28, "img": "assets/tmp_cover_6.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+];

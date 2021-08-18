@@ -18,41 +18,43 @@ class Square extends HookWidget {
         useState(SquareCategoryItems[0]["id"] as int);
 
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-          ),
-          Container(
-            height: screen.calc(860),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color(0xff959a99), Colors.white],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
               ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.only(
-              top: screen.screenPaddingTop + screen.calc(8),
-            ),
-            child: Column(
-              children: [
-                SquareHeader(),
-                SquareCategory(
-                  currentId: currentSquareCategoryId.value,
-                  squareCategoryItems: SquareCategoryItems,
-                  onChanged: (id) => currentSquareCategoryId.value = id,
+            Container(
+              height: screen.calc(860),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xff959a99), Colors.white],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
                 ),
-                SquareBanner(),
-                SquareList(),
-              ],
+              ),
             ),
-          )
-        ],
+            Container(
+              padding: EdgeInsets.only(
+                top: screen.screenPaddingTop + screen.calc(8),
+              ),
+              child: Column(
+                children: [
+                  SquareHeader(),
+                  SquareCategory(
+                    currentId: currentSquareCategoryId.value,
+                    squareCategoryItems: SquareCategoryItems,
+                    onChanged: (id) => currentSquareCategoryId.value = id,
+                  ),
+                  SquareBanner(),
+                  SquareList(songInfoList: SquareListItems),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavbar(value: 2),
     );
