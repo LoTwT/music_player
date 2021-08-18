@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/utils/screen_utils.dart';
+import 'package:music_player/utils/system_utils.dart';
 import 'package:music_player/views/home/category.dart';
 import 'package:music_player/views/home/header.dart';
 import 'package:music_player/views/home/swiper.dart';
@@ -11,6 +12,7 @@ import 'package:music_player/mock/mock.dart' show songs, recommend_songs;
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    setStatusBarStyle(Brightness.dark);
     final screen = ScreenUtils(context);
 
     return Scaffold(

@@ -121,3 +121,7 @@ const SquareCategoryItems = [
   {"id": 10, "title": "cc", "color": null},
   {"id": 11, "title": "dd", "color": null},
 ];
+
+const SquareBannerItems = [
+  {},
+];
