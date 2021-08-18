@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const songs = [
   {
     "id": "1",
@@ -103,4 +105,19 @@ const BottomNavbarInfos = <Map>[
     "activeImgPath": "assets/icon-person.png",
     "title": "帐号",
   },
+];
+
+const SquareCategoryItems = [
+  {"id": 0, "title": "推荐", "color": null},
+  {"id": 1, "title": "官方", "color": null},
+  {"id": 2, "title": "精品", "color": 0xffe7aa5a},
+  {"id": 3, "title": "欧美", "color": null},
+  {"id": 4, "title": "电子", "color": null},
+  {"id": 5, "title": "流行", "color": null},
+  {"id": 6, "title": "乡村", "color": null},
+  {"id": 7, "title": "其它", "color": null},
+  {"id": 8, "title": "aa", "color": null},
+  {"id": 9, "title": "bb", "color": null},
+  {"id": 10, "title": "cc", "color": null},
+  {"id": 11, "title": "dd", "color": null},
 ];
