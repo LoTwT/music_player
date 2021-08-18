@@ -122,6 +122,12 @@ const SquareCategoryItems = [
   {"id": 11, "title": "dd", "color": null},
 ];
 
-const SquareBannerItems = [
-  {},
+var squareBannerItems = [
+  {"index": 0, "title": "000"},
+  {"index": 1, "title": "111"},
+  {"index": 2, "title": "222"},
+  {"index": 3, "title": "333"},
+  {"index": 4, "title": "444"},
+  {"index": 5, "title": "555"},
+  {"index": 6, "title": "666"},
 ];
