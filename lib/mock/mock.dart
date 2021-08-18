@@ -123,11 +123,15 @@ const SquareCategoryItems = [
 ];
 
 var squareBannerItems = [
-  {"index": 0, "title": "000"},
-  {"index": 1, "title": "111"},
-  {"index": 2, "title": "222"},
-  {"index": 3, "title": "333"},
-  {"index": 4, "title": "444"},
-  {"index": 5, "title": "555"},
-  {"index": 6, "title": "666"},
+  {
+    "index": 0,
+    "title": "请保持眉梢欢跃，因为有人等你对视",
+    "img": "assets/tmp_square_cover_1.png"
+  },
+  {"index": 1, "title": "111", "img": "assets/tmp_square_cover_2.png"},
+  {"index": 2, "title": "222", "img": "assets/tmp_square_cover_3.png"},
+  {"index": 3, "title": "333", "img": "assets/tmp_square_cover_1.png"},
+  {"index": 4, "title": "444", "img": "assets/tmp_square_cover_2.png"},
+  {"index": 5, "title": "555", "img": "assets/tmp_square_cover_3.png"},
+  {"index": 6, "title": "666", "img": "assets/tmp_square_cover_1.png"},
 ];
