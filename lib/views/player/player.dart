@@ -14,7 +14,7 @@ class MusicPlayer extends StatelessWidget {
     final screen = ScreenUtils(context);
     setStatusBarStyle(Brightness.light);
 
-    final routeArgs = ModalRoute.of(context)?.settings.arguments as Map;
+    // final routeArgs = ModalRoute.of(context)?.settings.arguments as Map;
 
     return Scaffold(
       body: Stack(
