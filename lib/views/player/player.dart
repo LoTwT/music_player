@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
-import 'package:music_player/views/player/player_%20interactive.dart';
+import 'package:music_player/views/player/player_interactive.dart';
 import 'package:music_player/views/player/player_body.dart';
 import 'package:music_player/views/player/player_control.dart';
 import 'package:music_player/views/player/player_header.dart';
@@ -42,12 +42,22 @@ class MusicPlayer extends StatelessWidget {
               children: [
                 PlayerHeader(),
                 PlayerBody(isPlaying: false),
-                PlayerInteractive(),
-                PlayerProgress(),
-                PlayerControl(),
               ],
             ),
-          )
+          ),
+          Positioned(
+            bottom: 0,
+            width: screen.screenWidth,
+            child: Container(
+              child: Column(
+                children: [
+                  PlayerInteractive(),
+                  PlayerProgress(),
+                  PlayerControl(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -74,3 +74,16 @@ flutter:
 
     - assets/player-arm.png
     - assets/player-disc.png
+
+    - assets/icon-3dot-w.png
+    - assets/icon-bell-w.png
+    - assets/icon-heart-w.png
+    - assets/icon-download-w.png
+    - assets/icon-message-w.png
+
+    - assets/icon-backward-w.png
+    - assets/icon-forward-w.png
+    - assets/icon-playlist-w.png
+    - assets/icon-playloop-w.png
+    - assets/icon-play-w.png
+    - assets/icon-pause-w.png

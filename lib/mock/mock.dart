@@ -156,3 +156,11 @@ const SquareListItems = [
   {"id": 27, "img": "assets/tmp_cover_5.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
   {"id": 28, "img": "assets/tmp_cover_6.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
 ];
+
+const PlayerInteractiveIcons = [
+  "assets/icon-heart-w.png",
+  "assets/icon-download-w.png",
+  "assets/icon-bell-w.png",
+  "assets/icon-message-w.png",
+  "assets/icon-3dot-w.png",
+];
