@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
@@ -16,24 +17,38 @@ class MusicPlayer extends StatelessWidget {
     final routeArgs = ModalRoute.of(context)?.settings.arguments as Map;
 
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.only(
-          top: screen.screenPaddingTop,
-          left: screen.calc(24),
-          right: screen.calc(24),
-        ),
-        decoration: BoxDecoration(
-          color: Color(0x99000000),
-        ),
-        child: Column(
-          children: [
-            PlayerHeader(),
-            PlayerBody(),
-            PlayerInteractive(),
-            PlayerProgress(),
-            PlayerControl(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          Image.asset(
+            "assets/tmp_cover_1.jpg",
+            height: screen.screenHeight,
+            fit: BoxFit.fill,
+          ),
+          Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
+              child: Container(
+                color: Colors.black.withOpacity(0.2),
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              top: screen.screenPaddingTop,
+              left: screen.calc(24),
+              right: screen.calc(24),
+            ),
+            child: Column(
+              children: [
+                PlayerHeader(),
+                PlayerBody(),
+                PlayerInteractive(),
+                PlayerProgress(),
+                PlayerControl(),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

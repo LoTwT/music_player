@@ -70,3 +70,6 @@ flutter:
     - assets/tmp_square_cover_1.png
     - assets/tmp_square_cover_2.png
     - assets/tmp_square_cover_3.png
+
+    - assets/player-arm.png
+    - assets/player-disc.png
