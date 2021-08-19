@@ -63,6 +63,8 @@ flutter:
     - assets/icon-video-b.png
 
     - assets/icon-left-arrow.png
+    - assets/icon-left-arrow-w.png
+    - assets/icon-share-w.png
 
     - assets/tmp_square_cover_1.png
     - assets/tmp_square_cover_2.png
