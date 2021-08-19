@@ -11,14 +11,56 @@ class PlayerHeader extends StatelessWidget {
       height: screen.calc(98),
       child: Row(
         children: [
-          Container(
-            child: Text("left"),
+          GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: Container(
+              child: Image.asset(
+                "assets/icon-left-arrow-w.png",
+                width: screen.calc(48),
+                height: screen.calc(48),
+              ),
+            ),
           ),
           Expanded(
-            child: Text("center"),
+            child: Container(
+              padding: EdgeInsets.only(top: screen.calc(16)),
+              child: Column(
+                children: [
+                  Text(
+                    "Somewhere Only We know",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: screen.calc(30),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: screen.calc(4)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Keane",
+                          style: TextStyle(color: Color(0x99ffffff)),
+                        ),
+                        Image.asset(
+                          "assets/icon-right-arrow-w.png",
+                          width: screen.calc(20),
+                          height: screen.calc(20),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
           Container(
-            child: Text("right"),
+            child: Image.asset(
+              "assets/icon-share-w.png",
+              width: screen.calc(48),
+              height: screen.calc(48),
+            ),
           ),
         ],
       ),
