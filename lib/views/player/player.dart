@@ -20,7 +20,7 @@ class MusicPlayer extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            "assets/tmp_cover_1.jpg",
+            "assets/tmp_cover_7.jpg",
             height: screen.screenHeight,
             fit: BoxFit.fill,
           ),
@@ -41,7 +41,7 @@ class MusicPlayer extends StatelessWidget {
             child: Column(
               children: [
                 PlayerHeader(),
-                PlayerBody(),
+                PlayerBody(isPlaying: false),
                 PlayerInteractive(),
                 PlayerProgress(),
                 PlayerControl(),
