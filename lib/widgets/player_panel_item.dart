@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/utils/screen_utils.dart';
 
 class PlayerPanelItem extends StatelessWidget {
-  final icon;
+  final String iconPath;
+  final double width;
+  final double height;
 
   PlayerPanelItem({
     Key? key,
-    required this.icon,
+    required this.iconPath,
+    this.width = 48,
+    this.height = 48,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final screen = ScreenUtils(context);
-
     return Center(
       child: Image.asset(
-        icon,
-        width: screen.calc(55),
-        height: screen.calc(55),
+        iconPath,
+        width: width,
+        height: height,
       ),
     );
   }

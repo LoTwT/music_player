@@ -80,6 +80,7 @@ flutter:
     - assets/icon-heart-w.png
     - assets/icon-download-w.png
     - assets/icon-message-w.png
+    - assets/icon-heart-w-fill.png
 
     - assets/icon-backward-w.png
     - assets/icon-forward-w.png

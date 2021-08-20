@@ -63,8 +63,8 @@ class PlayerBody extends HookWidget {
             top: screen.calc(24),
             child: Transform.rotate(
               origin: Offset(
-                screen.calc(-137),
-                screen.calc(-99),
+                screen.calc(-131),
+                screen.calc(-78),
               ),
               angle: isPlaying ? 28 * pi / 180 : 0,
               child: Image.asset(

@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
 import 'package:music_player/views/player/player_interactive.dart';
@@ -8,12 +9,13 @@ import 'package:music_player/views/player/player_control.dart';
 import 'package:music_player/views/player/player_header.dart';
 import 'package:music_player/views/player/player_progress.dart';
 
-class MusicPlayer extends StatelessWidget {
+class MusicPlayer extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final screen = ScreenUtils(context);
     setStatusBarStyle(Brightness.light);
 
+    final isPlaying = useState(false);
     // final routeArgs = ModalRoute.of(context)?.settings.arguments as Map;
 
     return Scaffold(
@@ -41,7 +43,7 @@ class MusicPlayer extends StatelessWidget {
             child: Column(
               children: [
                 PlayerHeader(),
-                PlayerBody(isPlaying: false),
+                PlayerBody(isPlaying: isPlaying.value),
               ],
             ),
           ),
@@ -53,7 +55,10 @@ class MusicPlayer extends StatelessWidget {
                 children: [
                   PlayerInteractive(),
                   PlayerProgress(),
-                  PlayerControl(),
+                  PlayerControl(
+                    isPlaying: isPlaying.value,
+                    onPlay: () => isPlaying.value = !isPlaying.value,
+                  ),
                 ],
               ),
             ),
