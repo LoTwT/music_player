@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/state/play_state.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
+import 'package:music_player/views/player/play_list.dart';
 import 'package:music_player/views/player/player_interactive.dart';
 import 'package:music_player/views/player/player_body.dart';
 import 'package:music_player/views/player/player_control.dart';
@@ -68,6 +69,7 @@ class MusicPlayer extends StatelessWidget {
                       else
                         playState.player.pause();
                     },
+                    onPlaylist: () => showPlayList(context),
                   ),
                 ],
               ),
