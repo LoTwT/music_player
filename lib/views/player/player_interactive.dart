@@ -9,6 +9,8 @@ class PlayerInteractive extends StatelessWidget {
   final VoidCallback? onFavourite;
   final VoidCallback? onDownload;
   final VoidCallback? onBell;
+  final VoidCallback? onComment;
+  final VoidCallback? onDetail;
 
   PlayerInteractive({
     Key? key,
@@ -16,6 +18,8 @@ class PlayerInteractive extends StatelessWidget {
     this.onFavourite,
     this.onDownload,
     this.onBell,
+    this.onComment,
+    this.onDetail,
   }) : super(key: key);
 
   @override
@@ -54,13 +58,15 @@ class PlayerInteractive extends StatelessWidget {
             width: screen.calc(55),
             height: screen.calc(55),
           ),
-          PlayerPanelItem(
+          ImgButton(
             iconPath: "assets/icon-message-w.png",
+            onTap: onComment,
             width: screen.calc(55),
             height: screen.calc(55),
           ),
-          PlayerPanelItem(
+          ImgButton(
             iconPath: "assets/icon-3dot-w.png",
+            onTap: onDetail,
             width: screen.calc(55),
             height: screen.calc(55),
           ),

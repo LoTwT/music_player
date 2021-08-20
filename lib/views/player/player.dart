@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/state/play_state.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
+import 'package:music_player/views/player/play_info.dart';
 import 'package:music_player/views/player/play_list.dart';
 import 'package:music_player/views/player/player_interactive.dart';
 import 'package:music_player/views/player/player_body.dart';
@@ -55,7 +56,9 @@ class MusicPlayer extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  PlayerInteractive(),
+                  PlayerInteractive(
+                    onDetail: () => showPlayInfo(context),
+                  ),
                   PlayerProgress(
                     currentTime: playState.currentTime,
                     totalTime: playState.totalTime,
