@@ -8,8 +8,8 @@ class PlayerProgress extends StatelessWidget {
 
   PlayerProgress({
     Key? key,
-    this.currentTime = 0,
-    this.totalTime = 0,
+    required this.currentTime,
+    required this.totalTime,
   }) : super(key: key);
 
   @override
