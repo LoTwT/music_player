@@ -69,10 +69,7 @@ class Header extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(left: screen.calc(32)),
-            child: Hero(
-              tag: "PlayingIcon",
-              child: PlayingIcon(),
-            ),
+            child: PlayingIcon(),
           ),
         ],
       ),

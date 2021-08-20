@@ -37,10 +37,7 @@ class SquareHeader extends StatelessWidget {
             ),
           ),
           Container(
-            child: Hero(
-              tag: "PlayingIcon",
-              child: PlayingIcon(),
-            ),
+            child: PlayingIcon(),
           ),
         ],
       ),
