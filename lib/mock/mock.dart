@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const songs = [
   {
     "id": "1",
@@ -153,4 +155,18 @@ const SquareListItems = [
   {"id": 26, "img": "assets/tmp_cover_4.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
   {"id": 27, "img": "assets/tmp_cover_5.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
   {"id": 28, "img": "assets/tmp_cover_6.jpg", "title": "钢琴摇滚 | 浪子赠予诗人的一纸情书"},
+];
+
+const PlayInfoListInfos1 = [
+  {"icon": Icons.person_outline, "text": "歌手：Keane(基音乐队)"},
+  {"icon": Icons.disc_full_outlined, "text": "专辑: Somewhere Only We Know"},
+  {"icon": Icons.link_off_outlined, "text": "来源: 歌单 [钢琴摇滚 | 浪子赠予 xxx 的xxx]"},
+  {"icon": Icons.videocam_outlined, "text": "相关视频"},
+];
+
+const PlayInfoListInfos2 = [
+  {"icon": Icons.cloud_outlined, "text": "云贝推歌 (已有 12 人推荐)"},
+  {"icon": Icons.shopping_cart_outlined, "text": "单曲购买"},
+  {"icon": Icons.rate_review_outlined, "text": "评分: 4.9 分 (12 人已评)"},
+  {"icon": Icons.add, "text": "加入到我的歌单"},
 ];
