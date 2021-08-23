@@ -6,13 +6,23 @@ import 'package:music_player/views/login/login_nickname.dart';
 import 'package:music_player/views/login/login_password.dart';
 import 'package:music_player/views/login/login_welcome.dart';
 
-class Login extends HookWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final step = useState(1);
+    final routeArgs = ModalRoute.of(context)?.settings.arguments;
+
+    int step = 1;
+    if (routeArgs != null) {
+      step = (routeArgs as Map)["step"];
+    }
+
     final steps = {
       1: LoginWelcome(
-        onLogin: () => step.value++,
+        onLogin: () => Navigator.pushNamed(
+          context,
+          "/login",
+          arguments: {"step": 2},
+        ),
         onVisitor: () {},
         onWechat: () {},
         onQQ: () {},
@@ -20,9 +30,18 @@ class Login extends HookWidget {
         onApple: () {},
         onEasy: () {},
       ),
-      2: LoginBind()
+      2: LoginBind(
+        onNext: (area, phone) => Navigator.pushNamed(
+          context,
+          "/login",
+          arguments: {
+            "step": 3,
+          },
+        ),
+      ),
+      3: LoginAuth(),
     };
 
-    return steps[step.value]!;
+    return steps[step]!;
   }
 }
