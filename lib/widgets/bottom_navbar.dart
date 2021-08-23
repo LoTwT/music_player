@@ -38,11 +38,15 @@ class BottomNavbar extends HookWidget {
                       isActive: value == index,
                       onTap: () {
                         switch (index) {
-                          case 0:
+                          case 0: // 发现
                             Navigator.pushNamed(context, "/home");
                             break;
-                          case 2:
+                          case 2: // 我的
                             Navigator.pushNamed(context, "/square");
+                            break;
+                          case 4: // 帐号
+                            // todo 判断登录状态
+                            Navigator.pushNamed(context, "/login");
                             break;
                         }
                       },

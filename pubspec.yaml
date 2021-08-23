@@ -88,3 +88,10 @@ flutter:
     - assets/icon-playloop-w.png
     - assets/icon-play-w.png
     - assets/icon-pause-w.png
+
+    - assets/icon-apple.png
+    - assets/icon-easy.png
+    - assets/icon-qq.png
+    - assets/icon-wechat.png
+    - assets/icon-weibo.png
+    - assets/icon-login-logo.png
