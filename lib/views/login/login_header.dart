@@ -13,34 +13,39 @@ class LoginHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final screen = ScreenUtils(context);
 
-    return Container(
-      height: screen.calc(88),
-      child: Row(
-        children: [
-          Container(
-            width: screen.calc(100),
-            alignment: Alignment.centerLeft,
-            child: GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Icon(Icons.arrow_back),
+    return Hero(
+      tag: "LoginHeader",
+      child: Container(
+        height: screen.calc(88),
+        child: Row(
+          children: [
+            Container(
+              width: screen.calc(100),
+              alignment: Alignment.centerLeft,
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: Icon(Icons.arrow_back),
+              ),
             ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontSize: screen.calc(34),
-                  fontWeight: FontWeight.w700,
+            Expanded(
+              child: Center(
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    inherit: false,
+                    color: Color(0xff333333),
+                    fontSize: screen.calc(34),
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: screen.calc(100),
-          ),
-        ],
+            Container(
+              alignment: Alignment.centerRight,
+              width: screen.calc(100),
+            ),
+          ],
+        ),
       ),
     );
   }
