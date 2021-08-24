@@ -59,7 +59,15 @@ class Login extends StatelessWidget {
           );
         },
       ),
-      5: LoginNickname(),
+      5: LoginNickname(
+        onNickname: (nickname) {
+          print(nickname);
+
+          // 完成注册
+          // 返回首页
+          Navigator.pushNamed(context, "/home");
+        },
+      ),
     };
 
     return steps[step]!;
