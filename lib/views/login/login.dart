@@ -39,7 +39,18 @@ class Login extends StatelessWidget {
           },
         ),
       ),
-      3: LoginAuth(),
+      3: LoginAuth(
+        onFinish: (verifyCode) {
+          // print(verifyCode);
+          Navigator.pushNamed(
+            context,
+            "/login",
+            arguments: {"step": 4},
+          );
+        },
+      ),
+      4: LoginPassword(),
+      5: LoginNickname(),
     };
 
     return steps[step]!;
