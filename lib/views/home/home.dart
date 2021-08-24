@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_redux_hooks/flutter_redux_hooks.dart';
+import 'package:music_player/state/store.dart';
 import 'package:music_player/utils/screen_utils.dart';
 import 'package:music_player/utils/system_utils.dart';
 import 'package:music_player/views/home/category.dart';
@@ -9,11 +12,12 @@ import 'package:music_player/widgets/recommend_list.dart';
 import 'package:music_player/widgets/song_list.dart';
 import 'package:music_player/mock/mock.dart' show songs, recommend_songs;
 
-class Home extends StatelessWidget {
+class Home extends HookWidget {
   @override
   Widget build(BuildContext context) {
     setStatusBarStyle(Brightness.dark);
     final screen = ScreenUtils(context);
+    final nickname = useSelector<StoreState, String>((state) => state.nickname);
 
     return Scaffold(
       body: DefaultTextStyle(
@@ -26,6 +30,7 @@ class Home extends StatelessWidget {
                 EdgeInsets.only(top: screen.screenPaddingTop + screen.calc(8)),
             child: Column(
               children: [
+                Text(nickname != null ? nickname : "未登录"),
                 Header(),
                 Swiper(),
                 Category(),
